@@ -9,9 +9,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EEKSL</title>
     <script>
-      if (!navigator.userAgent.match(/Windows|Macintosh/)) {
-            window.location.replace("secondary/index.html");
+      
+      function onResize() {
+        if (screen.width < 700 || screen.height < 700) {
+          document.location = "./secondary/index.html";
         }
+      }
+
+      window.onresize = onResize;
     </script>
   </head>
   <body>
